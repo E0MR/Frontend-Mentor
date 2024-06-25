@@ -1,5 +1,7 @@
 # Frontend Mentor - QR code component
 
+* https://e0mr.github.io/Frontend-Mentor/1.QR%20code%20component/index.html
+
 ![Design preview for the QR code component coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋
