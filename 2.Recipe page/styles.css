@@ -17,17 +17,40 @@
 html,
 body {
    width: 100%;
-   
+
    display: flex;
    align-items: center;
-   justify-content: center; 
+   justify-content: center;
 }
 
+h2 {
+   color: hsl(14, 45%, 36%);
+   font-family: "Young Serif";
+   font-weight: 400;
+}
+
+h2~ol li::marker,
+h2~ul li::marker {
+   color: hsl(14, 45%, 36%);
+   font-weight: bolder;
+}
+
+li,
+p,
+table td {
+   font-size: 16px;
+   font-family: "Outfit";
+   letter-spacing: 0.19px;
+   color: hsl(30, 10%, 34%);
+}
+
+li::marker {
+   font-size: 12px;
+}
 
 .container {
    width: 375px;
    background-color: hsl(0, 0%, 100%);
-   /*background-color: #E0E1F0;*/
 }
 
 .container img {
@@ -49,7 +72,7 @@ main h1 {
    font-family: "Outfit";
    padding: 20px;
    border-radius: 10px;
-   margin-top: 20px;
+   margin: 20px 0;
 }
 
 .preparation-time h3 {
@@ -57,38 +80,111 @@ main h1 {
 }
 
 .preparation-time ul {
-   padding: 28px;
-   
+   padding: 12px 28px 0 20px;
+
    display: flex;
    justify-content: center;
    flex-flow: column;
 }
 
-.preparation-time ul li {
-   padding: 15px;
+.preparation-time li {
+   padding: 5px 10px;
 }
 
-.preparation-time ul li::marker {
+.preparation-time li::marker {
    color: hsl(332, 51%, 32%);
 }
 
-h2 {
-   color: hsl(14, 45%, 36%);
-   font-family: "Young Serif";
-   font-weight: 400;
+.ingredients {
+   padding: 12px 0;
 }
 
-h2 ~ ol li::marker,
-h2 ~ ul li::marker {
-   color: hsl(14, 45%, 36%);
-   font-weight: bolder;
+.ingredients ul,
+.instructions ol {
+   padding: 16px;
 }
 
-li,
-p {
+.ingredients li {
+   padding: 5px 12px;
+}
+
+.instructions {
+   margin: 28px 0;
+}
+
+.instructions ol {
+   padding: 0 0 0 20px;
+}
+
+.instructions li {
+   padding: 5px 12px;
+}
+
+.instructions li::marker {
    font-size: 16px;
-   font-weight: "Outfit";
+   font-weight: bold;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+.nutrition {
+   margin-top: 28px;
+}
+
+.nutrition p {
+   margin: 12px 0;
+}
+
+.nutrition table td:nth-child(1) {
+   padding: 0 0 0 28px;
+}
+
+.nutrition table td:nth-child(2) {
+   color: hsl(14, 45%, 36%);
+   font-weight: 700;
+   font-family: "Outfit";
+}
+
+.nutrition table {
+   width: 100%;
+   border-collapse: collapse;
+}
+
+.nutrition table td {
+   padding: 10px;
+}
+
+.nutrition table tr {
+   border-bottom: 1px solid hsl(30, 10%, 34%);
+}
+
+.nutrition table tr:last-child {
+   border: none;
+}
+
+@media(min-width: 800px) {
+   body {
+      background-color: #F3E5D8;
+   }
+
+   .container {
+      width: 720px;
+      padding: 20px;
+      border-radius: 20px;
+   }
+
+   .container img {
+      border-radius: 10px;
+   }
    
+   .instructions li::marker {
+      font-size: 10px;
+   }
+
+   li,
+   p,
+   table td {
+      font-size: 10px;
+   }
 }
 
 
