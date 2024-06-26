@@ -1,0 +1,116 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+@font-face {
+   font-family: Young Serif;
+   src: url("./assets/fonts/young-serif/YoungSerif-Regular.ttf");
+}
+
+@font-face {
+   font-family: Outfit;
+   src: url(./assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
+}
+
+html,
+body {
+   width: 100%;
+   
+   display: flex;
+   align-items: center;
+   justify-content: center; 
+}
+
+
+.container {
+   width: 375px;
+   background-color: hsl(0, 0%, 100%);
+   /*background-color: #E0E1F0;*/
+}
+
+.container img {
+   width: 100%;
+}
+
+.container main {
+   padding: 28px;
+}
+
+main h1 {
+   font-family: "Young Serif";
+   font-weight: 400;
+   margin-bottom: 20px;
+}
+
+.preparation-time {
+   background-color: hsl(330, 100%, 98%);
+   font-family: "Outfit";
+   padding: 20px;
+   border-radius: 10px;
+   margin-top: 20px;
+}
+
+.preparation-time h3 {
+   color: hsl(332, 51%, 32%);
+}
+
+.preparation-time ul {
+   padding: 28px;
+   
+   display: flex;
+   justify-content: center;
+   flex-flow: column;
+}
+
+.preparation-time ul li {
+   padding: 15px;
+}
+
+.preparation-time ul li::marker {
+   color: hsl(332, 51%, 32%);
+}
+
+h2 {
+   color: hsl(14, 45%, 36%);
+   font-family: "Young Serif";
+   font-weight: 400;
+}
+
+h2 ~ ol li::marker,
+h2 ~ ul li::marker {
+   color: hsl(14, 45%, 36%);
+   font-weight: bolder;
+}
+
+li,
+p {
+   font-size: 16px;
+   font-weight: "Outfit";
+   
+}
+
+
+/*
+
+
+
+### Neutral
+- Eggshell: hsl(30, 54%, 90%)
+- Light Grey:  hsl(30, 18%, 87%);
+- Wenge Brown: hsl(30, 10%, 34%)
+- Dark Charcoal: hsl(24, 5%, 18%)
+
+
+
+### Fonts
+
+- Family: [Young Serif](https://fonts.google.com/specimen/Young+Serif)
+- Weights: 400
+
+- Family: [Outfit](https://fonts.google.com/specimen/Outfit)
+- Weights: 400, 600, 700
+
+
+*/
