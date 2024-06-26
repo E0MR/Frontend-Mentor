@@ -17,6 +17,7 @@
 html,
 body {
    width: 100%;
+   min-height: 100vh;
 
    display: flex;
    align-items: center;
@@ -168,12 +169,12 @@ main h1 {
 
    .container {
       width: 720px;
-      padding: 20px;
-      border-radius: 20px;
+      padding: 28px;
+      border-radius: 28px;
    }
 
    .container img {
-      border-radius: 10px;
+      border-radius: 14px;
    }
    
    .instructions li::marker {
