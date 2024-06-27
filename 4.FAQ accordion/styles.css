@@ -1,0 +1,114 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+@font-face {
+   font-family: WorkSans;
+   src: url("./assets/fonts/WorkSans-VariableFont_wght.ttf");
+}
+
+html,
+body {
+   height: 100%;
+   width: 100%;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   font-family: "WorkSans";
+   color: hsl(292, 42%, 14%);
+   
+   background: no-repeat;
+   background-image: url(./assets/images/background-pattern-mobile.svg);
+   background-size: 100%;
+   background-color: hsl(275, 100%, 97%);
+}
+
+.container {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-flow: column;
+
+   background-color: hsl(0, 0%, 100%);
+   width: 355px;
+   border-radius: 10px;
+   padding: 24px;
+}
+
+.container h1 {
+   display: flex;
+   width: 100%;
+   text-align: left;
+   margin-bottom: 24px;
+}
+
+.container h1 img {
+   width: 24px;
+   margin-right: 24px;
+}
+
+.container p {
+   font-size: 16px;
+   color: hsl(292, 16%, 49%);
+   padding: 12px 0;
+   
+}
+
+.container details {
+   width: 100%;
+}
+
+.container summary {
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   cursor: pointer;
+   font-weight: 600;
+   font-size: 16px;
+}
+.container summary img {
+   width: 30px;
+   margin-left: 50px;
+}
+
+hr {
+   width: 100%;
+   margin: 12px 0;
+   opacity: 0.5;
+   height: 1px;
+   background-color: hsl(292, 16%, 49%);
+   border: none;
+}
+
+summary:hover {
+   color: #AD28EB;
+}
+
+
+details[open] img {
+   content: url("./assets/images/icon-minus.svg");
+}
+
+@media (min-width: 800px) {
+   body {
+         background-image: url(./assets/images/background-pattern-desktop.svg);
+   }
+   .container {
+      width: 540px;
+   }
+   
+   .container summary {
+      font-size: 16px;
+   }
+  .container p {
+      font-size: 12px;
+      padding-right: 100px;
+   }
+}
+
+
