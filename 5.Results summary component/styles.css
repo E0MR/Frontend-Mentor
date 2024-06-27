@@ -1,0 +1,227 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+@font-face {
+   font-family: Hanken Grotesk;
+   src: url('./assets/fonts/HankenGrotesk-VariableFont_wght.ttf');
+}
+
+html,
+body {
+   width: 100%;
+
+   font-family: "Hanken Grotesk";
+}
+
+.container,
+header,
+h1,
+main {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-flow: column;
+}
+
+header {
+   background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+   color: white;
+   border-radius: 0 0 30px 30px;
+   padding: 0 0 24px;
+}
+
+header h4,
+header h2 {
+   padding: 24px 0 12px;
+}
+
+header h1 {
+   width: 150px;
+   height: 150px;
+   border-radius: 50%;
+   font-size: 50px;
+   background-image: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+}
+
+header h1 p {
+   font-size: 18px;
+   opacity: 0.75;
+}
+
+header>p {
+   padding: 0 75px;
+   text-align: center;
+   opacity: 0.75;
+}
+
+
+
+main {
+   padding: 30px;
+   width: 100%;
+   color: hsl(224, 30%, 27%);
+}
+
+main h4 {
+   width: 100%;
+   text-align: left;
+}
+
+main section {
+   width: 100%;
+   padding: 24px;
+
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   position: relative;
+   padding-left: 72px;
+
+   margin-top: 24px;
+   border-radius: 10px;
+   font-size: 18px;
+   font-weight: 600;
+}
+
+section img {
+   position: absolute;
+   left: 24px;
+}
+
+section span {
+   opacity: 0.5;
+}
+
+
+button {
+   width: 100%;
+   padding: 24px;
+   border-radius: 50px;
+   border: none;
+   background-color: hsl(224, 30%, 27%);
+   margin-top: 30px;
+   color: #fff;
+   font-size: 18px;
+   font-weight: 600;
+}
+
+.s1 h5 {
+   color: hsl(0, 100%, 67%);
+}
+
+.s1 {
+   background-color: hsla(0, 100%, 67%, 0.1);
+}
+
+.s2 h5 {
+   color: hsl(39, 100%, 56%);
+}
+
+.s2 {
+   background-color: hsla(39, 100%, 56%, 0.1);
+}
+
+.s3 h5 {
+   color: hsl(166, 100%, 37%);
+}
+
+.s3 {
+   background-color: hsla(166, 100%, 37%, 0.1);
+}
+
+.s4 h5 {
+   color: hsl(234, 85%, 45%);
+}
+
+.s4 {
+   background-color: hsla(234, 85%, 45%, 0.1);
+}
+
+@media (min-width: 800px) {
+
+   html,
+   body {
+      width: 100%;
+      height: 100%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+
+   .container {
+      flex-flow: row;
+      justify-content: stretch;
+      align-items: flex-end;
+      border-radius: 30px;
+      
+      box-shadow: 10px 30px 30px hsl(224, 30%, 27%, 0.1);
+   }
+
+   header {
+      border-radius: 30px;
+      height: 500px;
+      justify-content: space-around;
+      flex: 1;
+   }
+
+   main {
+      padding: 50px 30px 30px;
+      flex: 1;
+   }
+
+   main section,
+   button {
+      padding-top: 18px;
+      padding-bottom: 18px;
+   }
+
+
+
+}
+
+
+/*
+# Colors
+
+### Primary
+
+- Light red: hsl(0, 100%, 67%)
+- Orangey yellow: hsl(39, 100%, 56%)
+- Green teal: hsl(166, 100%, 37%)
+- Cobalt blue: hsl(234, 85%, 45%)
+
+## Gradients
+
+- Light slate blue (background): hsl(252, 100%, 67%)
+- Light royal blue (background): hsl(241, 81%, 54%)
+
+- Violet blue (circle): hsla(256, 72%, 46%, 1)
+- Persian blue (circle): hsla(241, 72%, 46%, 0)
+
+
+
+### Neutral
+
+- White: hsl(0, 0%, 100%)
+- Pale blue: hsl(221, 100%, 96%)
+- Light lavender: hsl(241, 100%, 89%)
+- Dark gray blue: hsl(224, 30%, 27%)
+
+### Notes
+
+Use transparency to get the color variations necessary to match the design. Hint: look into using `hsla()`.
+
+## Typography
+
+### Body Copy
+
+- Font size (paragraphs): 18px
+
+### Font
+
+- Family: [Hanken Grotesk](https://fonts.google.com/specimen/Hanken+Grotesk)
+- Weights: 500, 700, 800
