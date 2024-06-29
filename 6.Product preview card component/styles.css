@@ -1,0 +1,162 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/* font-family: "Montserrat", sans-serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+/* font-family: "Fraunces", serif; */
+
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+html,
+body {
+   height: 100%;
+   width: 100%;
+   
+   background-color: hsl(30, 38%, 92%);
+}
+
+body,
+.container,
+main div,
+main button {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.container {
+   width: 360px;
+   flex-flow: column;
+   
+   background-color: hsl(0, 0%, 100%);
+   border-radius: 10px;
+}
+
+.container > img {
+   width: 100%;
+   border-radius: 10px 10px 0 0;
+}
+
+main {
+   padding: 14px 28px;
+}
+
+main p:first-child {
+   text-transform: uppercase;
+   letter-spacing: 8px;
+}
+
+main p {
+   font-size: 14px;
+   padding: 16px 0 20px;
+   color: hsl(228, 12%, 48%);
+   font-family: "Montserrat", sans-serif;
+   font-weight: 500;
+}
+
+main .text {
+   padding-right: 28px;
+}
+
+main h1 {
+   line-height: 30px;
+   color: hsl(212, 21%, 14%);
+   font-family: "Fraunces", serif;
+}
+
+main .price {
+   color: hsl(158, 36%, 37%);
+   display: inline-block;
+   margin-right: 28px;
+}
+
+main div {
+   justify-content: flex-start;
+}
+
+main del {
+   color: hsl(228, 12%, 48%);
+   font-family: "Montserrat", sans-serif;
+   font-weight: 500;
+}
+
+main button {
+   width: 100%;
+   background-color: hsl(158, 36%, 37%);
+   border: none;
+   border-radius: 5px;
+   padding: 14px;
+   color: #fff;
+   margin-top: 20px;
+   cursor: pointer;
+   font-family: "Montserrat", sans-serif;
+   font-weight: 700;
+}
+
+main button:hover {
+   background-color: hsl(158, 36%, 20%);
+}
+
+button img {
+   margin-right: 14px;
+}
+
+
+@media (min-width: 800px) {
+   .container {
+      flex-flow: row;
+      width: 600px;
+   }
+   .container > img {
+      content: url("./images/image-product-desktop.jpg");
+      flex: 1;
+      height: 450px;
+      width: auto;
+      border-radius: 10px 0 0 10px;
+   }
+   
+   main {
+      flex: 1;
+      height: 450px;
+      display: flex;
+      flex-flow: column;
+      justify-content: space-between;
+      padding: 28px;
+   }
+}
+
+
+/*
+
+
+# Colors
+
+### Primary
+
+- Dark cyan: hsl(158, 36%, 37%)
+- Cream: hsl(30, 38%, 92%)
+
+### Neutral
+
+- Very dark blue: hsl(212, 21%, 14%)
+- Dark grayish blue: hsl(228, 12%, 48%)
+- White: hsl(0, 0%, 100%)
+
+## Typography
+
+### Body Copy
+
+- Font size (paragraph): 14px
+
+### Font
+
+- Family: [Montserrat](https://fonts.google.com/specimen/Montserrat)
+- Weights: 500, 700
+
+- Family: [Fraunces](https://fonts.google.com/specimen/Fraunces)
+- Weights: 700
