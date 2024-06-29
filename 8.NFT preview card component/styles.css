@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+/* font-family: "Outfit", sans-serif; */
+
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+html,
+body {
+   height: 100%;
+   width: 100%;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: hsl(217, 54%, 11%);
+
+   font-family: "Outfit", sans-serif;
+}
+
+
+.container {
+   width: 360px;
+   padding: 24px;
+   background-color: hsl(216, 50%, 16%);
+   border-radius: 20px;
+   
+   box-shadow: 20px 50px 10px hsl(216, 50%, 10%),
+   -20px 50px 10px hsl(216, 50%, 10%);
+}
+
+.container .img {
+   width: 312px;
+   position: relative;
+}
+
+.img:before {
+   content: url('./images/icon-view.svg');
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 312px;
+   height: 312px;
+   background-color: #f00;
+   border-radius: 10px;
+   
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: hsla(178, 100%, 50%, 0.3);
+   opacity: 0;
+   transition: 0.25s;
+}
+
+.img img {
+   width: 100%;
+   border-radius: 10px;
+   cursor: pointer;
+}
+
+.container h2 {
+   color: white;
+   font-weight: 600;
+   margin: 20px 0;
+   cursor: pointer;
+}
+
+.container p {
+   font-size: 18px;
+   color: hsl(215, 51%, 70%);
+}
+
+.pt {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin: 20px 0;
+}
+
+.pt img {
+   margin-right: 10px;
+}
+
+.pt p:first-child {
+   color: hsl(178, 100%, 50%);
+}
+
+.pt p {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+p span {
+   color: #fff;
+   cursor: pointer;
+}
+
+.container hr {
+   height: 1px;
+   border: none;
+   background-color: hsl(215, 32%, 27%);
+}
+
+.own {
+   display: flex;
+   align-items: center;
+   padding-top: 20px;
+}
+
+.own img {
+   border: 1px solid white;
+   border-radius: 50%;
+   width: 36px;
+   margin-right: 20px;
+}
+
+h2:hover,
+p span:hover {
+   color: hsl(178, 100%, 50%);
+}
+
+
+.img:hover:before {
+   opacity: 1;
+}
+
+
+/*
+# Colors
+
+### Primary
+
+- Soft blue: hsl(215, 51%, 70%)
+- Cyan: hsl(178, 100%, 50%)
+
+### Neutral
+
+- Very dark blue (main BG): hsl(217, 54%, 11%)
+- Very dark blue (card BG): hsl(216, 50%, 16%)
+- Very dark blue (line): hsl(215, 32%, 27%)
+- White: hsl(0, 0%, 100%)
+
+## Typography
+
+### Body Copy
+
+- Font size (paragraph): 18px
+
+### Font
+
+- Family: [Outfit]
+(https://fonts.google.com/specimen/Outfit)
+- Weights: 300, 400, 600
