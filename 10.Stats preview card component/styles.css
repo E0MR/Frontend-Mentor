@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+/* font-family: "Inter", sans-serif; */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+/* font-family: "Lexend Deca", sans-serif; */
+
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+html,
+body {
+   height: 100%;
+   width: 100%;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   background-color: hsl(233, 47%, 7%);
+}
+
+.container {
+   width: 360px;
+   background-color: hsl(244, 38%, 16%);
+   color: hsl(0, 0%, 100%);
+
+   border-radius: 10px;
+   
+   display: flex;
+   flex-flow: column;
+}
+
+.container h2 span {
+   color: hsl(277, 64%, 61%);
+}
+
+.img {
+   width: 100%;
+   position: relative;
+}
+
+.img:before {
+   content: "";
+   position: absolute;
+   inset: 0;
+   width: 360px;
+   height: 264.220183px;
+   background-color: hsla(277, 64%, 61%, 0.25);
+   border-radius: 10px 10px 0 0;
+}
+
+.container img {
+   width: 360px;
+   border-radius: 10px 10px 0 0;
+   opacity: 0.01;
+}
+
+.container p {
+   font-size: 15px;
+   color: hsla(0, 0%, 100%, 0.75);
+}
+
+section p {
+   color: hsla(0, 0%, 100%, 0.6);
+}
+
+
+main {
+   padding: 30px;
+   text-align: center;
+   font-family: "Inter", sans-serif;
+}
+
+main > p {
+   padding: 20px 20px 30px;
+}
+
+section p {
+   text-transform: uppercase;
+   font-family: "Lexend Deca", sans-serif;
+}
+
+main section:nth-of-type(2) {
+   margin: 20px 0;
+}
+
+
+@media (min-width: 800px) {
+   .container {
+      flex-flow: row;
+      width: 1000px;
+      height: 412.962963px;
+   }
+   
+   .img {
+      order: 2;
+      border-radius: 0 10px 10px 0;
+      width: 500px;
+      object-fit: fill;
+   }
+   
+   main {
+      width: 500px;
+      padding: 75px 50px 0 75px;
+      text-align: left;
+   }
+   
+   main section {
+      display: inline-block;
+      margin-top: 40px;
+   }
+   
+   main section:nth-of-type(2) {
+      margin: 0 50px;
+   }
+   
+   main > h2 {
+      margin-right: 100px;
+   }
+   
+   main > p {
+      padding-left: 0;
+   }
+   
+   .img img {
+      content: url("./images/image-header-desktop.jpg");
+      width: 100%;
+      border-radius: 0 10px 10px 0;
+   }
+   
+   .img:before {
+      width: 500px;
+      height: 412.962963px;
+      border-radius: 0 10px 10px 0;
+   }
+}
+
+
+
+
+/*
+
+# Colors
+
+### Primary
+
+- Very dark blue (main background): hsl(233, 47%, 7%)
+- Dark desaturated blue (card background): hsl(244, 38%, 16%)
+- Soft violet (accent): hsl(277, 64%, 61%)
+
+### Neutral
+
+- White (main heading, stats): hsl(0, 0%, 100%)
+- Slightly transparent white (main paragraph): hsla(0, 0%, 100%, 0.75)
+- Slightly transparent white (stat headings): hsla(0, 0%, 100%, 0.6)
+
+## Typography
+
+### Body Copy
+
+- Font size: 15px
+
+### Font
+
+- Family: [Inter](https://fonts.google.com/specimen/Inter)
+- Weights: 400, 700
+
+- Family: [Lexend Deca](https://fonts.google.com/specimen/Lexend+Deca)
+- Weights: 400
