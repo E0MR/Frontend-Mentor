@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+/* font-family: "Red Hat Display", sans-serif; */
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+html,
+body {
+   height: 100%;
+   width: 100%;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   font-family: "Red Hat Display", sans-serif;
+
+   background-image: url("./images/pattern-background-mobile.svg");
+   background-position: top;
+   background-repeat: no-repeat;
+   background-size: 100%;
+   background-color: hsl(225, 100%, 94%);
+}
+
+.container {
+   width: 360px;
+
+   display: flex;
+   flex-flow: column;
+   align-items: center;
+   justify-content: center;
+
+   border-radius: 20px;
+   background-color: #fff;
+   text-align: center;
+}
+
+.container img {
+   width: 100%;
+   border-radius: 20px 20px 0 0;
+}
+
+main {
+   padding: 30px 24px;
+}
+
+main>p:first-of-type {
+   margin: 20px;
+}
+
+h2,
+p span:first-child {
+   color: hsl(223, 47%, 23%);
+   font-weight: 900;
+}
+
+.music a {
+   font-weight: 600;
+   cursor: pointer;
+}
+
+.music {
+   background-color: hsl(225, 100%, 98%);
+   border-radius: 10px;
+   padding: 20px;
+
+   display: flex;
+   align-items: center;
+}
+
+.music img {
+   width: 50px;
+}
+
+.container p {
+   font-size: 16px;
+   color: hsl(224, 23%, 55%);
+   font-weight: 500;
+}
+
+main button {
+   background-color: hsl(245, 75%, 52%);
+   border: none;
+   padding: 20px 0;
+   width: 100%;
+   margin: 20px auto;
+   border-radius: 10px;
+   color: white;
+   font-weight: 700;
+   font-size: 16px;
+   cursor: pointer;
+
+   box-shadow: 0 16px 16px hsla(245, 75%, 52%, 0.25);
+}
+
+main button:hover {
+   background-color: hsl(245, 40%, 50%);
+}
+
+main p:last-child {
+   font-weight: 700;
+   cursor: pointer;
+}
+main p:last-child:hover {
+   color: hsl(223, 47%, 23%);
+}
+
+
+@media (min-width: 800px) {
+   body {
+      background-image: url("./images/pattern-background-desktop.svg");
+   }
+}
+
+
+
+/*
+# Colors
+
+### Primary
+
+- Pale blue: hsl(225, 100%, 94%)
+- Bright blue: hsl(245, 75%, 52%)
+
+### Neutral
+
+- Very pale blue: hsl(225, 100%, 98%)
+- Desaturated blue: hsl(224, 23%, 55%)
+- Dark blue: hsl(223, 47%, 23%)
+
+## Typography
+
+### Body Copy
+
+- Font size (paragraph): 16px
+
+### Font
+
+- Family: [Red Hat Display]
+(https://fonts.google.com/specimen/Red+Hat+Display)
+- Weights: 500, 700, 900
+
+*/
