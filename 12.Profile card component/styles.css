@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+/* font-family: "Kumbh Sans", sans-serif; */
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+html,
+body {
+   height: 100%;
+   width: 100%;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background: url('./images/bg-pattern-top.svg') 140% 150%,
+      url('./images/bg-pattern-bottom.svg') -25% -75%;
+   background-repeat: no-repeat;
+   background-color: hsl(185, 75%, 39%);
+}
+
+.container {
+   width: 360px;
+   border-radius: 20px;
+   background-color: #fff;
+   font-family: "Kumbh Sans", sans-serif;
+
+   box-shadow: 0 20px 20px #0003;
+}
+
+.img,
+.img img {
+   width: 100%;
+   border-radius: 20px 20px 0 0;
+}
+
+main {
+   position: relative;
+   display: flex;
+   flex-flow: column;
+   align-items: center;
+}
+
+main img {
+   border-radius: 50%;
+   position: absolute;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   border: 5px solid white;
+}
+
+main h2 {
+   font-size: 18px;
+   font-weight: 700;
+}
+
+main>h2 {
+   margin-top: 75px;
+   font-weight: 700;
+}
+
+main h3 {
+   font-weight: 400;
+}
+
+main hr {
+   width: 100%;
+   margin: 25px 0;
+}
+
+main .info {
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+   padding-bottom: 25px;
+}
+
+.info section {
+   display: flex;
+   flex-flow: column;
+   align-items: center;
+   justify-content: center;
+}
+
+main>h3,
+main p {
+   color: hsl(0, 0%, 59%);
+   font-size: 12px;
+}
+
+main>h3 {
+   font-size: 16px;
+}
+
+h2 span {
+   color: hsl(0, 0%, 59%);
+}
+
+
+@media (min-width: 800px) {
+
+   html,
+   body {
+      background: url('./images/bg-pattern-top.svg') -20000% -100%,
+         url('./images/bg-pattern-bottom.svg') 20000% 200%;
+      background-repeat: no-repeat;
+      background-color: hsl(185, 75%, 39%);
+   }
+}
+
+
+
+
+
+/*## Colors
+
+### Primary
+
+Dark cyan: hsl(185, 75%, 39%)
+Very dark desaturated blue: hsl(229, 23%, 23%)
+Dark grayish blue: hsl(227, 10%, 46%)
+
+### Neutral
+
+Dark gray: hsl(0, 0%, 59%)
+
+## Typography
+
+### Body Copy
+
+- Font size (name and stats): 18px
+
+### Font
+
+- Family: [Kumbh Sans]
+(https://fonts.google.com/specimen/Kumbh+Sans)
+- Weights: 400, 700
