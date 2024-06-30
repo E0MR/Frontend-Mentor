@@ -127,6 +127,11 @@ header h1,
 }
 
 @media (min-width: 800px) {
+   
+   html,
+   body {
+      height: 100%;
+   }
    .container {
       flex-flow: row;
       flex-wrap: wrap;
