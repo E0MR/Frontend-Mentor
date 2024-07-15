@@ -163,6 +163,7 @@ main h1 {
 }
 
 @media(min-width: 800px) {
+   html,
    body {
       background-color: #F3E5D8;
       height: 100%;
