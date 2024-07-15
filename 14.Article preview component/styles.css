@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+/* font-family: "Manrope", sans-serif; */
+
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+html,
+body {
+   height: 100%;
+   width: 100%;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   font-family: "Manrope", sans-serif;
+   background-color: hsl(210, 46%, 95%);
+}
+
+.container {
+   width: 320px;
+   border-radius: 10px;
+   background-color: #fff;
+
+   display: flex;
+   flex-flow: column;
+}
+
+header {
+   width: 100%;
+}
+
+header img {
+   width: 100%;
+   height: 210px;
+   border-radius: 10px 10px 0 0;
+   object-fit: cover;
+   object-position: top;
+}
+
+main {
+   padding: 30px;
+}
+
+main .bold {
+   font-weight: 700;
+   margin-bottom: 20px;
+   color: hsl(217, 19%, 35%);
+}
+
+main .thin {
+   font-weight: 500;
+   color: hsl(214, 17%, 51%);
+}
+
+footer {
+   width: 100%;
+   padding: 15px 30px 15px;
+   font-size: 13px;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+}
+
+footer .bottom img {
+   height: 100%;
+   border-radius: 50%;
+   position: absolute;
+   top: 0;
+
+   filter: blur(3px);
+   opacity: 0.3;
+}
+
+.bottom {
+   width: 100%;
+   padding: 5px 0;
+   position: relative;
+}
+
+footer .bottom p {
+   margin-left: 60px;
+   color: hsl(214, 17%, 51%);
+}
+
+.bottom p:first-of-type {
+   color: hsl(217, 19%, 35%);
+   font-weight: 700;
+}
+
+.img {
+   width: 35px;
+   height: 35px;
+   border-radius: 50%;
+   position: absolute;
+   right: 30px;
+   background-color: hsl(212, 23%, 69%);
+   z-index: 9;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   transition: 0.5s;
+}
+
+.top {
+   position: absolute;
+   inset: 0;
+   background-color: hsl(217, 19%, 35%);
+   border-radius: 0 0 10px 10px;
+   padding: 0 30px 0;
+
+   display: flex;
+   align-items: center;
+
+   transition: 0.5s;
+}
+
+.top h4 {
+   color: hsl(212, 23%, 69%);
+   text-transform: uppercase;
+   font-weight: 500;
+   letter-spacing: 3px;
+}
+
+.top h4,
+.top img {
+   margin-right: 20px;
+   font-size: 16px;
+}
+
+.img:hover {
+   background-color: hsl(210, 46%, 95%);
+}
+
+footer:has(.img:hover) .top {
+   opacity: 0;
+}
+
+
+@media (min-width: 800px) {
+   .container {
+      width: auto;
+      flex-flow: row;
+      width: 800px;
+   }
+
+   header {
+      width: auto;
+      height: auto;
+      flex: 1.5;
+   }
+
+   header img {
+      height: 100%;
+      border-radius: 10px 0 0 10px;
+      object-fit: cover;
+      object-position: left;
+   }
+
+   .body {
+      width: auto;
+      height: 100%;
+      flex: 2.5;
+      padding: 10px 0 20px 10px;
+   }
+
+   main .bold {
+      font-size: 30px;
+      font-weight: 700;
+   }
+
+   main .thin {
+      font-size: 18px;
+      margin-right: 20px;
+   }
+
+   .img {
+      background-color: hsl(210, 46%, 95%);
+   }
+
+   .img:hover {
+      background-color: hsl(212, 23%, 69%);
+   }
+
+   .top {
+      inset: auto;
+      border-radius: 10px;
+      padding: 20px;
+      padding-left: 40px;
+      left: 315px;
+
+      opacity: 0;
+      bottom: 50px;
+   }
+
+   .top:before {
+      content: "";
+      position: absolute;
+      top: calc(100% - 1px);
+      left: 50%;
+      transform: translateX(-50%);
+      border: 15px solid;
+      border-color: hsl(217, 19%, 35%) transparent transparent;
+   }
+
+   footer:has(.img:hover) .top {
+      opacity: 1;
+      bottom: 75px;
+   }
+
+   .top h4 {
+      font-size: 18px;
+   }
+
+}
+
+
+
+
+/*
+
+
+
+# Colors
+
+- Very Dark Grayish Blue: hsl(217, 19%, 35%)
+- Desaturated Dark Blue: hsl(214, 17%, 51%)
+- Grayish Blue: hsl(212, 23%, 69%)
+- Light Grayish Blue: hsl(210, 46%, 95%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 13px
+
+### Headings
+
+- Family: [Manrope]
+(https://fonts.google.com/specimen/Manrope)
+- Weights: 500, 700
+
+## Icons
+
+We provide SVGs for the social icons. But please feel free to use a font icon library if you like. Some suggestions can be found below:
+
+- [Font Awesome](https://fontawesome.com)
+- [IcoMoon](https://icomoon.io)
+- [Ionicons](https://ionicons.com)
