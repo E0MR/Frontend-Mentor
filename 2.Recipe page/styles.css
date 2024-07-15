@@ -17,7 +17,7 @@
 html,
 body {
    width: 100%;
-   min-height: 100vh;
+   width: 100%;
 
    display: flex;
    align-items: center;
@@ -163,10 +163,8 @@ main h1 {
 }
 
 @media(min-width: 800px) {
-   html,
    body {
       background-color: #F3E5D8;
-      height: 100%;
    }
 
    .container {
