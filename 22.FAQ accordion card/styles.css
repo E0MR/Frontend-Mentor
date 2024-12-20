@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap");
+
+:root {
+  /* Colors */
+  --white: white;
+  /* Primary */
+  --very-dark-desaturated-blue: hsl(238, 29%, 16%);
+  --soft-red: hsl(14, 88%, 65%);
+  /* Gradient */
+  --soft-violet: hsl(273, 75%, 66%);
+  --soft-blue: hsl(240, 73%, 65%);
+  /* Neutral */
+  --very-dark-grayish-blue: hsl(237, 12%, 33%);
+  --dark-grayish-blue: hsl(240, 6%, 50%);
+  --light-grayish-blue: hsl(240, 5%, 91%);
+  /* Typography */
+  --font-size: 12px;
+  --font-family: "Kumbh Sans", serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: linear-gradient(var(--soft-violet), var(--soft-blue));
+  font-family: var(--font-family);
+}
+
+main {
+  width: 325px;
+  padding: 0 1.5rem 2rem;
+  margin: 0 auto;
+  border-radius: 1rem;
+  background-color: var(--white);
+  box-shadow: 0 2rem 50px 0 var(--very-dark-grayish-blue);
+
+  img {
+    display: block;
+    width: 15rem;
+    padding-bottom: 2rem;
+    margin: 0 auto;
+    background-image: url(images/bg-pattern-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-size: 100%;
+    transform: translateY(-4.125rem);
+  }
+
+  section {
+    margin-top: -2.75rem;
+    h1 {
+      margin-bottom: 1.25rem;
+      color: var(--very-dark-desaturated-blue);
+      text-align: center;
+      font-size: 2rem;
+    }
+
+    details[open] {
+      span {
+        display: inline-block;
+        margin-top: 0.5rem;
+        color: var(--dark-grayish-blue);
+        font-size: 0.8rem;
+      }
+      summary {
+        color: var(--very-dark-desaturated-blue);
+        font-weight: 700;
+        &::after {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    details summary {
+      position: relative;
+      color: var(--very-dark-grayish-blue);
+      list-style-type: none;
+      cursor: pointer;
+      font-size: 0.8rem;
+
+      &:hover {
+        color: var(--soft-red);
+      }
+
+      &::after {
+        position: absolute;
+        right: 0;
+        content: url(images/icon-arrow-down.svg);
+      }
+    }
+    hr {
+      margin: 1rem 0;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    padding: 3rem;
+
+    details {
+      width: 20rem;
+    }
+
+    .image {
+      &::before {
+        position: fixed;
+        z-index: 99;
+        content: url(images/illustration-box-desktop.svg);
+        transform: translateY(6rem) translateX(-6.35rem) scale(0.7);
+      }
+      &::after {
+        position: absolute;
+        z-index: 9;
+        content: url(images/bg-pattern-desktop.svg);
+        transform: translateY(-42.5rem) translateX(-35rem) scale(0.75);
+        clip-path: polygon(59% 28.5%, 100% 28.5%, 100% 86.5%, 59% 86.5%);
+      }
+    }
+
+    img {
+      width: 22.5rem;
+      background-image: none;
+      content: url(images/illustration-woman-online-desktop.svg);
+      transform: translateY(1rem) translateX(-4.5rem);
+      clip-path: polygon(4.01rem 0, 100% 0, 100% 100%, 4.01rem 100%);
+    }
+
+    section {
+      margin-top: 0rem;
+      transform: translateX(-2.5rem);
+      h1 {
+        text-align-last: left;
+      }
+    }
+  }
+}
+
+/* 
+
+## Colors
+
+### Primary
+
+#### Text
+
+- Very dark desaturated blue: hsl(238, 29%, 16%)
+- Soft red: hsl(14, 88%, 65%)
+
+#### Gradient
+
+Background gradient:
+
+- Soft violet: hsl(273, 75%, 66%)
+- Soft blue: hsl(240, 73%, 65%)
+
+### Neutral
+
+#### Text
+
+- Very dark grayish blue: hsl(237, 12%, 33%)
+- Dark grayish blue: hsl(240, 6%, 50%)
+
+#### Dividers
+
+- Light grayish blue: hsl(240, 5%, 91%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 12px
+
+### Font
+
+- Family: [Kumbh Sans](https://fonts.google.com/specimen/Kumbh+Sans)
+- Weights: 400, 700
+
+
+*/
