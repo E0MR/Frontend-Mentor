@@ -1,114 +1,251 @@
 * {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 html {
-   scroll-behavior: smooth;
-   scroll-padding: 50px 0 25px;
+  scroll-behavior: smooth;
+  scroll-padding: 75px 0 25px;
 }
 
 html,
 body,
 .container {
-   width: 100%;
-   background-color: #000;
+  width: 100%;
+  background-color: #000;
 }
+
+/* navigations & filters */
+body:has(.nav-all:checked) .challenge {
+  display: block;
+}
+
+body:has(.nav-newbie:checked) {
+  .challenge {
+    display: none;
+  }
+  .newbie {
+    display: block;
+  }
+}
+
+body:has(.nav-junior:checked) {
+  .challenge {
+    display: none;
+  }
+  .junior {
+    display: block;
+  }
+}
+
+body:has(.nav-intermdiate:checked) {
+  .challenge {
+    display: none;
+  }
+  .intermdiate {
+    display: block;
+  }
+}
+
+body:has(.nav-advanced:checked) {
+  .challenge {
+    display: none;
+  }
+  .advanced {
+    display: block;
+  }
+}
+
+body:has(.nav-gurus:checked) {
+  .challenge {
+    display: none;
+  }
+  .gurus {
+    display: block;
+  }
+}
+
+/* ##################### */
 
 .container {
-   text-align: center;
-   padding-top: 100px;
-}
-.container a:first-child {
-   margin-top: 20px;
-}
-.container a:last-child {
-   margin-bottom: 50px;
-}
-.container a {
-   width: 90%;
-   background-color: #61668866;
-   color: #fff;
-   padding: 12px;
-   display: inline-block;
-   margin-bottom: 24px;
-   border-radius: 6px;
-   font-size: 14px;
-   cursor: pointer;
-   
-   animation: animate linear both;
-   animation-timeline: view();
-   
-   -webkit-tap-highlight-color: transparent;
-   user-select: none;
-   
-   text-decoration: none;
-   font-weight: 900;
-   font-family: 'Times New Roman', Times, serif;
-   transition: 0.5s;
-}
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+  padding-top: calc(150px + 2rem);
+  padding-bottom: calc(50px + 1rem);
+  gap: 1em;
 
-.container a:hover {
-   background-color: #9BFAF3;
-   color: #000;
-   box-shadow: 0 0 20px #9BFAF3;
+  .newbie .class {
+    background-color: #6abecd;
+  }
+
+  .challenge {
+    position: relative;
+    flex: 1 1 300px;
+    max-width: 100%;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: #61668866;
+    animation: animate linear both;
+
+    animation-timeline: view();
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 0.5rem;
+    }
+
+    .classification {
+      span {
+        display: inline-block;
+        padding: 0.25rem 0.5rem;
+        margin: 0.25rem 0.5rem 0 0;
+        border-radius: 0.25rem;
+        font-weight: 900;
+      }
+    }
+
+    h1 {
+      display: flex;
+      align-items: center;
+      height: 3rem;
+      margin: 1rem 0;
+      color: #fff;
+      font-size: 1.25rem;
+    }
+
+    .free-class {
+      color: #3e54a3;
+      background-color: #e7ebf9;
+    }
+    .freeplus-class {
+      color: #fff;
+      background-color: #f48925;
+    }
+
+    a {
+      display: inline-block;
+      width: 100%;
+      padding: 12px;
+      border-radius: 0.5rem;
+      color: #fff;
+      background-color: #61668866;
+      cursor: pointer;
+      user-select: none;
+      transition: 0.5s;
+
+      text-align: center;
+      font-family: "Times New Roman", Times, serif;
+      font-size: 14px;
+      font-weight: 900;
+
+      text-decoration: none;
+
+      -webkit-tap-highlight-color: transparent;
+
+      &:hover {
+        color: #000;
+        background-color: #fff;
+      }
+    }
+  }
 }
 
 footer {
-   color: #fff;
-   width: 100%;
-   height: 50px;
-   font-weight: 900;
-   text-align: center;
-   position: fixed;
-   bottom: 0;
-   
-   display: flex;
-   align-items: center;
-   justify-content: center; 
-   
-   backdrop-filter: blur(2.5px);
+  position: fixed;
+  bottom: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+  color: #fff;
+  text-align: center;
+  font-weight: 900;
+
+  backdrop-filter: blur(2.5px);
 }
 
 header {
-   position: fixed;
-   top: 0;
-   height: 100px;
-   width: 100%;
-   color: #fff;
-   font-size: 30px;
-   z-index: 9;
-   
-   display: flex;
-   align-items: center;
-   justify-content: center; 
-   
-   backdrop-filter: blur(2.5px);
+  position: fixed;
+  z-index: 9;
+  top: 0;
+
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 150px;
+  color: #fff;
+
+  backdrop-filter: blur(2.5px);
+
+  h1 {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background-color: #000;
+  }
+
+  nav {
+    width: 100%;
+    background-color: #000;
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      width: 100%;
+      li {
+        position: relative;
+        width: calc(100% / 7);
+        padding: 0.5rem 0;
+        list-style: none;
+        text-align: center;
+
+        &:has(input:checked) {
+          border-radius: 0.5rem;
+          color: #000;
+          background-color: #fff;
+          box-shadow: inset 0 0 10px #000;
+          font-weight: 900;
+        }
+        input {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+          inset: 0;
+        }
+      }
+    }
+  }
 }
 
-
-
 /*
-My animation for buttons
+My animation for cards
 */
-@supports (animation-timeline: view()) { /* check if browser support the animation or not */
-   @keyframes animate {
-      entry 0% {
-         opacity: 0;
-         transform: scale(0);
-      }
-      entry 150% { /*100%*/
-         opacity: 1;
-         transform: scale(1);
-      }
-      exit -50% { /*0%*/
-         opacity: 1;
-         transform: scale(1);
-      }
-      exit 100% {
-         opacity: 0;
-         transform: scale(0);
-      }
-   }
+@supports (animation-timeline: view()) {
+  /* check if browser support the animation or not */
+  @keyframes animate {
+    entry 0% {
+      opacity: 0;
+      transform: scale(0);
+    }
+    entry 150% {
+      /*100%*/
+      opacity: 1;
+      transform: scale(1);
+    }
+    exit -50% {
+      /*0%*/
+      opacity: 1;
+      transform: scale(1);
+    }
+    exit 100% {
+      opacity: 0;
+      transform: scale(0);
+    }
+  }
 }
