@@ -74,16 +74,21 @@ body:has(.nav-gurus:checked) {
   padding: 1rem;
   padding-top: calc(150px + 2rem);
   padding-bottom: calc(50px + 1rem);
+  font-family: Arial, Helvetica, sans-serif;
   gap: 1em;
 
   .newbie .class {
     background-color: #6abecd;
   }
 
+  .junior .class {
+    background-color: #aad742;
+  }
+
   .challenge {
     position: relative;
-    flex: 1 1 300px;
-    max-width: 100%;
+    flex: 1 1 calc(100% / 4 - 3rem);
+    max-width: calc(100% / 4);
     padding: 1rem;
     border-radius: 1rem;
     background-color: #61668866;
@@ -219,6 +224,15 @@ header {
           inset: 0;
         }
       }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    .challenge {
+      flex: 1 1 calc(100% / 2 - 1rem);
+      max-width: calc(100% / 2);
     }
   }
 }

@@ -1,0 +1,332 @@
+@font-face {
+  /* font-family: "DM Sans", serif; */
+  font-family: "DM Sans";
+  src: url(assets/fonts/static/DMSans-Regular.ttf);
+}
+
+:root {
+  /* Colors */
+  --purple-100: hsl(254, 88%, 90%);
+  --purple-500: hsl(256, 67%, 59%);
+
+  --yellow-100: hsl(31, 66%, 93%);
+  --yellow-500: hsl(39, 100%, 71%);
+
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 7%);
+
+  /* Typography */
+  --font-size: 18px;
+  --font-family: "DM Sans", serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  padding: 2rem 1rem;
+  background-color: hsla(254, 88%, 90%, 0.2);
+  font-family: var(--font-family);
+}
+
+main {
+  display: grid;
+  width: 100%;
+  margin: 0 auto;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+
+  .card {
+    width: 100%;
+    border-radius: 0.5rem;
+    background-color: var(--bgc);
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .c1 {
+    padding: 1rem 0;
+    text-align: center;
+    h1 {
+      line-height: 2.75rem;
+      padding: 0 1rem;
+      color: var(--white);
+      font-size: 3rem;
+      font-weight: 500;
+
+      span {
+        color: var(--yellow-500);
+      }
+    }
+
+    img {
+      width: 60%;
+      margin: 1rem 0 0;
+    }
+
+    p {
+      color: var(--white);
+      font-size: var(--font-size);
+    }
+  }
+
+  .c2 {
+    h3 {
+      line-height: 1.75rem;
+      padding: 0 0 0 1rem;
+      font-size: 1.5rem;
+    }
+  }
+
+  .c3 {
+    display: flex;
+    flex-flow: column;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    h3 {
+      line-height: 1.75rem;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+    img {
+      width: 65%;
+    }
+  }
+
+  .c4 {
+    padding: 1.5rem 1rem;
+    h4 {
+      text-align: center;
+      font-size: 1.5rem;
+    }
+    img {
+      margin: 1rem 0;
+    }
+    p {
+      padding: 0 1rem;
+      text-align: center;
+      font-size: var(--font-size);
+    }
+  }
+
+  .c5 {
+    padding: 1.5rem 3.5rem;
+    text-align: center;
+    h2 {
+      line-height: 1.75rem;
+      margin-top: 2rem;
+      color: var(--white);
+      font-size: 2rem;
+      font-weight: 500;
+    }
+  }
+
+  .c6 {
+    padding: 2rem;
+    p {
+      margin-bottom: 1.5rem;
+      font-size: var(--font-size);
+      span {
+        font-size: 3rem;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .c7 {
+    padding: 2rem;
+    h2 {
+      line-height: 1.75rem;
+      margin-bottom: 1.5rem;
+      font-size: 1.75rem;
+      font-weight: 600;
+      span {
+        color: var(--purple-500);
+        font-style: italic;
+      }
+    }
+    img {
+      width: 70%;
+    }
+  }
+
+  .c8 {
+    padding: 1.5rem;
+    h2 {
+      line-height: 1.75rem;
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+      font-weight: 600;
+    }
+    img {
+      width: 85%;
+    }
+  }
+}
+
+@media (min-width: 786px) {
+  html,
+  body {
+    width: 100%;
+    height: 100vh;
+  }
+
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  main {
+    display: grid;
+    width: 80vw;
+    height: 85vh;
+    grid-template-rows: 1.3fr 0.3fr 0.7fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
+
+    .card {
+      overflow: hidden;
+    }
+
+    .c1 {
+      padding: 3rem;
+      grid-column: 2 / 4;
+
+      h1 {
+        line-height: 3.5rem;
+        font-size: 3.5rem;
+      }
+    }
+
+    .c2,
+    .c3 {
+      grid-row: 2 / 4;
+    }
+
+    .c2 {
+      padding: 1.5rem 1rem;
+      img {
+        width: auto;
+        height: 4.5rem;
+      }
+
+      h3 {
+        margin-top: 1rem;
+        font-size: 2rem;
+      }
+    }
+
+    .c3 {
+      padding: 1.5rem;
+      h3 {
+        margin-top: 1rem;
+        font-size: 2rem;
+      }
+      img {
+        width: 100%;
+      }
+    }
+
+    .c4 {
+      padding: 2.5rem 2rem;
+      grid-column: 4 / 5;
+      grid-row: 1 / 4;
+
+      h4 {
+        text-align: left;
+        font-size: 1.75rem;
+      }
+
+      img {
+        width: auto;
+        height: 20.5rem;
+      }
+
+      p {
+        padding-left: 0;
+        text-align: left;
+      }
+    }
+
+    .c5 {
+      display: flex;
+      justify-content: space-between;
+      padding: 1.5rem;
+      grid-column: 3 / 5;
+      grid-row: 4 / 5;
+
+      h2 {
+        margin: 3rem 0 0 0.5rem;
+        text-align: left;
+        font-size: 2.25rem;
+      }
+    }
+
+    .c6 {
+      padding: 1.5rem;
+    }
+
+    .c7 {
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      grid-column: 1 / 2;
+      grid-row: 1 / 3;
+
+      h2 {
+        line-height: 2rem;
+        font-size: 2.25rem;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+    .c8 {
+      padding: 2rem 0.75rem 2rem 1.5rem;
+      grid-column: 1 / 2;
+      grid-row: 3 / 5;
+
+      h2 {
+        line-height: 2rem;
+        margin-right: 2rem;
+        margin-bottom: 3rem;
+        font-size: 2.25rem;
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+/* 
+  
+  ## Colors
+  
+  - Purple 100: hsl(254, 88%, 90%)
+  - Purple 500: hsl(256, 67%, 59%)
+  
+  - Yellow 100: hsl(31, 66%, 93%)
+  - Yellow 500: hsl(39, 100%, 71%)
+  
+  - White: hsl(0, 0%, 100%)
+  - Black: hsl(0, 0%, 7%)
+  
+  ## Typography
+  
+  ### Body Copy
+  
+  - Font size (paragraph): 18px
+  
+  ### Font
+  
+  - Family: [DM Sans](https://fonts.google.com/specimen/DM+Sans)
+  - Weights: 400, 500
+  
+  */
