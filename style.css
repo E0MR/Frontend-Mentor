@@ -6,7 +6,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding: 250px 0 100px;
+  scroll-padding: 0;
 }
 ::-webkit-scrollbar {
   display: none;
@@ -77,8 +77,8 @@ body:has(.nav-gurus:checked) {
   gap: 1em; */
   padding: 1rem;
   padding-top: calc(150px + 2rem);
-  padding-bottom: calc(50px + 1rem);
-  font-family: Arial, Helvetica, sans-serif;
+  padding-bottom: calc(125px + 1rem);
+  font-family: Arial, Heletica, sans-serif;
 
   display: grid;
   max-width: 1200px;
