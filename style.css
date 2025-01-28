@@ -75,9 +75,7 @@ body:has(.nav-gurus:checked) {
   /* display: flex;
   flex-wrap: wrap;
   gap: 1em; */
-  padding: 1rem;
-  padding-top: calc(150px + 2rem);
-  padding-bottom: calc(125px + 1rem);
+  padding: calc(150px + 2rem) 1rem;
   font-family: Arial, Heletica, sans-serif;
 
   display: grid;
