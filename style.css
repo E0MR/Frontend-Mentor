@@ -72,9 +72,6 @@ body:has(.nav-gurus:checked) {
 /* ##################### */
 
 .container {
-  /* display: flex;
-  flex-wrap: wrap;
-  gap: 1em; */
   padding: calc(150px + 2rem) 1rem;
   font-family: Arial, Heletica, sans-serif;
 
@@ -94,8 +91,6 @@ body:has(.nav-gurus:checked) {
 
   .challenge {
     position: relative;
-    /* flex: 1 1 calc(100% / 4 - 3rem);
-    max-width: calc(100% / 4); */
     padding: 1rem;
     border-radius: 1rem;
     background-color: #61668866;
@@ -206,7 +201,7 @@ header {
     height: 0.5rem;
     width: 0;
     background-color: #fff;
-    animation: scrollbar linear both;
+    animation: scroll-animation linear both;
 
     animation-timeline: scroll();
   }
@@ -218,8 +213,6 @@ header {
     ul {
       display: flex;
       padding: 0 1rem;
-      /* align-items: center; */
-      /* justify-content: space-evenly; */
       width: 100%;
 
       li {
@@ -257,7 +250,7 @@ header {
 }
 
 
-@keyframes scrollbar {
+@keyframes scroll-animation {
   to {
     width: 100%;
   }
