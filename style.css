@@ -248,7 +248,7 @@ header {
           transform: translateX(2rem);
         }
 
-        &:has(:checked):before{
+        &:has(:checked):before {
           transform: translate(-0.25rem);
           opacity: 1;
         }
@@ -320,7 +320,6 @@ header {
     padding-right: 5rem;
   }
 }
-
 
 @keyframes scroll-animation {
   to {
