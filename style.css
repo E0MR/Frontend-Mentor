@@ -15,6 +15,7 @@
 html {
   scroll-behavior: smooth;
   scroll-padding: 0;
+  background-color: var(--bgc);
 }
 ::-webkit-scrollbar {
   display: none;
@@ -27,7 +28,7 @@ body,
   background-color: var(--bgc);
 }
 
-body:has(.theme:checked) {
+html:has(.theme:checked) {
   --bgc: #000000;
   --c: #ffffff;
 }
@@ -267,6 +268,7 @@ header {
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
     background-color: var(--bgc);
+    font-size: clamp(1rem, 1.25rem + 1vw, 2.5rem);
   }
 
   .scroll-bar {
