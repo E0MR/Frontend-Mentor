@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  /* Colors */
+  /* Primary */
+  --gradient-left: hsl(6, 100%, 80%);
+  --gradient-right: hsl(335, 100%, 65%);
+
+  /* Neutral */
+  --pale-blue: hsl(243, 100%, 93%);
+  --grayish-blue: hsl(229, 7%, 55%);
+  --dark-blue: hsl(228, 56%, 26%);
+  --very-dark-blue: hsl(229, 57%, 11%);
+
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 7%);
+
+  /* Typography */
+  --font-size: 14px;
+  --font-family: "Raleway", serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  padding: 125px 25px;
+  background-color: var(-very-dark-blue);
+  font-family: var(--font-family);
+  background-image: url(images/bg-mobile.png);
+  background-color: var(--very-dark-blue);
+  background-size: 100%;
+}
+
+main {
+  section {
+    background-color: var(--dark-blue);
+    border-radius: 10px;
+    color: var(--pale-blue);
+    font-size: var(--font-size);
+  }
+
+  .sec1 {
+    padding: 40px;
+    border-radius: 10px 100px 10px 10px;
+    margin-bottom: 16px;
+
+    .icons {
+      margin-top: 35px;
+      display: flex;
+      gap: 15px;
+
+      img {
+        padding: 12px 14px;
+        border-radius: 10px;
+        background-color: var(--very-dark-blue);
+      }
+    }
+  }
+
+  .sec2 {
+    position: relative;
+    padding: 32px;
+    padding-bottom: 54px;
+    text-align: center;
+
+    div {
+      input {
+        appearance: none;
+        -webkit-appearance: none;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        margin: 18px 0 12px;
+        width: calc(100% - 6px);
+        height: 14px;
+        outline: none;
+        background-color: var(--very-dark-blue);
+        border-radius: 10px;
+        outline: 3px solid var(--very-dark-blue);
+        /*outline-offset: 5px;
+        box-shadow: 0 0 0 5px yellow;*/
+      }
+
+      input::-webkit-slider-runnable-track {
+        height: 14px;
+        background: linear-gradient(
+          to right,
+          var(--gradient-left),
+          var(--gradient-right) 73%,
+          transparent 73%
+        );
+        clip-path: inset(0% 27.5% 0% 0% round 10px);
+      }
+
+      input::-webkit-slider-thumb {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        -webkit-appearance: none;
+        appearance: none;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--white);
+        cursor: pointer;
+      }
+
+      input::-moz-range-progress {
+        background: #007bff; /* Color for the progress */
+        height: 8px;
+        border-radius: 5px;
+      }
+
+      input::-moz-range-thumb {
+        width: 10px;
+        height: 10px;
+        background: var(--white);
+        cursor: pointer;
+      }
+
+      p {
+        font-weight: 700;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+
+    & > span {
+      position: absolute;
+      left: 50%;
+      top: 100%;
+      transform: translate(-50%, -50%);
+      padding: 15px 25px; /*top 20px*/
+      background-color: var(--white);
+      color: var(--grayish-blue);
+      font-weight: 700;
+      text-transform: uppercase;
+      border-radius: 10px;
+      white-space: nowrap;
+
+      display: flex;
+      align-items: center;
+
+      b {
+        font-size: 32px;
+        color: var(--very-dark-blue);
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+@media (min-width: 786px) {
+  body {
+    padding: 290px 260px;
+    background-image: url(images/bg-desktop.png);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+  }
+
+  main {
+    display: flex;
+    align-items: end;
+    gap: 30px;
+
+    .sec1 {
+      margin-bottom: 0;
+      flex-grow: 1;
+    }
+
+    p {
+      text-align: left;
+    }
+
+    .sec2 {
+      margin: 0;
+      padding: 40px;
+      flex-grow: 1.5;
+
+      div {
+        input::-webkit-slider-runnable-track {
+          clip-path: inset(0% 28.5% 0% 0% round 10px);
+        }
+      }
+
+      & > span {
+        left: 100%;
+        top: 0;
+        transform: translate(calc(-100% - 40px), -70%);
+
+        &::after {
+          content: "";
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          width: 0px;
+          height: 0px;
+          transform: translateY(25px);
+          border: 25px solid transparent;
+          border-right-color: var(--white);
+        }
+      }
+    }
+  }
+}
+/* 
+
+## Colors
+
+### Primary
+
+- Gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%)
+
+### Neutral
+
+- Pale Blue: hsl(243, 100%, 93%)
+- Grayish Blue: hsl(229, 7%, 55%)
+- Dark Blue: hsl(228, 56%, 26%)
+- Very Dark Blue: hsl(229, 57%, 11%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 14px
+
+### Font
+
+- Family: [Raleway](https://fonts.google.com/specimen/Raleway)
+- Weights: 400, 700
+
+*/

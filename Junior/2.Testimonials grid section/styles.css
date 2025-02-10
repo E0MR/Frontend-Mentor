@@ -26,7 +26,6 @@
 }
 
 body {
-  margin: 0 auto;
   padding: 70px 24px;
   background-color: var(--light-grayish-blue);
   font-family: var(--font-family);
